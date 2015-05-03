@@ -1,0 +1,26 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: orange;
+}
+
+.parallax {
+	position: relative;
+	margin: 1000px auto;
+	width: 100%;
+	height: 500px;
+	background: {
+		attachment: fixed;
+		position: 50% 50%;
+		repeat: no-repeat;
+		size: cover;
+	}
+
+	&.bg1 {
+		background-image: url(../images/landscape1.jpg);
+	}
+
+	&.bg2 {
+		background-image: url(../images/landscape2.jpg);
+	}
+}

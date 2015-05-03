@@ -1,0 +1,9 @@
+    div.background {
+        background: url(../img/bg1.jpg) no-repeat center 0 fixed;
+        height: 1000px;
+        position: relative;
+		left:15px;
+        -webkit-box-shadow: 0 0 20px #333;
+        box-shadow: 0 0 20px #333;
+    }
+

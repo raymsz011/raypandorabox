@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Rayspandora" content="rays pandora box, box, pandora">
+    <title>Ray Pandora Box</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    
+    
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+	
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    
+
+    
+ <!-- This is to send the user to a random url -->
+  <script type="text/javascript">
+    var urls = [
+        "rayweb/index.html",
+		'pandora1.html',
+		'pandora2.html',
+		'pandora3.html',
+    ];
+
+    function openBox() {
+		if (confirm("You've Been Warned!") == true) {
+        var url = urls[Math.floor(Math.random()*urls.length)];
+		} else {
+        url = "index.html";
+    }
+	    
+        window.location = url; // redirect
+    }
+</script>
+
+    
+  </head>
+  
+  
+  
+  <body>
+  
+<!-- Navigation -->
+ <nav id="bt-menu" class="bt-menu">
+	<a href="#" class="bt-menu-trigger"><span>Menu</span></a>
+	<ul>
+		<li><a href="index.html"><button type="button" class="btn btn-default"  aria-label="Left Align"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button></a></li>
+		<li><a href="#"><button type="button" class="btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-book" aria-hidden="true"></span></button></a></li>
+	</ul>
+    
+    <!-- Modal for book icon -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel" align="center">Ray's Pandorabox Info</h4>
+      </div>
+      <div class="modal-body">
+        First of all Thank you for testing my experimental pages, There are still lots of bugs from here and there but I can fix them later.
+        <br><br>
+        -Ray- 
+        <br><br>
+        <b>Note for my Pandorabox:</b> Click the box and it'll send you to a random website. Just click the menu if you want to go back to the home page
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div> <!-- End Modal -->
+    
+</nav>
+
+
+  <!--Navbar
+  <ul class="nav nav-tabs nav-justified" role="tablist">
+  <ul class="nav nav-pills nav-justified">
+  <li class="active"><a href="#">Home</a></li>
+  <li><a href="#">Nav1</a></li>
+  <li><a href="#">Nav2</a></li>
+  </ul>
+  </ul> -->
+
+
+
+
+
+ <!-- The main Things start here --> 
+  	<div> <center><img src="images/rays.png"> </center>
+    <h3> Open It At Your Own Risk!</h3>
+    </div>
+    
+    <div>
+    <center><a href="" onClick="openBox();return false;"><img src="images/pandora.png" onMouseOver="this.src='images/pandora2.png'" onMouseOut="this.src='images/pandora.png'"></a></center>
+	</div>
+
+
+
+  </body>
+  
+    <script src="js/menu.js"></script>
+    <script src="js/classie.js"></script>
+</html>

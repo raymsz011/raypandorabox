@@ -1,0 +1,117 @@
+// Convert Pixels to Ems
+// ================================================================================
+@function pxtoem($target, $context){
+	@return ($target/$context)+0em;
+}
+
+// Retina Images
+// ================================================================================
+@mixin retina($file, $ext, $w, $h) {
+	background-image: url($file + '.' + $ext);
+	
+	@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+		background-image: url($file + '@2x.' + $ext);
+		background-size: $w $h;
+	}
+}
+
+// Background Color
+// ================================================================================
+@mixin bgcolor($color) {
+	background-color: $color;
+}
+
+// Background RGBA
+// ================================================================================
+@mixin rgba($r, $g, $b, $a) {
+	background: rgb($r, $g, $b);
+	background: rgba($r, $g, $b, $a);
+}
+
+// Text Shadow
+// ================================================================================
+@mixin text-shadow($hor: 1px, $ver: 1px, $blur: 0, $color: none) {
+	text-shadow: ($hor $ver $blur $color);
+}
+
+// Border Radius 
+// ================================================================================
+@mixin border-radius($top_left: none, $top_right: none, $bot_right: none, $bot_left: none) {
+	@if $top_right != none {
+		@if $bot_right != none {
+			-moz-border-radius: $top_left $top_right $bot_right $bot_left;
+			-webkit-border-radius: $top_left $top_right $bot_right $bot_left;
+			border-radius: $top_left $top_right $bot_right $bot_left;
+		} 
+		@else {
+			-moz-border-radius:	$top_left $top_right;
+			-webkit-border-radius: $top_left $top_right;
+			border-radius: $top_left $top_right;
+		}
+	}
+	@else {
+		-moz-border-radius: $top_left;
+		-webkit-border-radius: $top_left;
+		border-radius: $top_left;
+	}
+}
+
+// Box Shadow
+// ================================================================================
+@mixin box-shadow($hor: 0, $ver: 0, $blur: 3px, $spread: 0, $color: rgba(0, 0, 0, 0.5), $inset: false) {
+	@if $hor != none {
+		@if $inset != inset {
+			-moz-box-shadow: $hor $ver $blur $spread $color;
+			-webkit-box-shadow:	$hor $ver $blur $spread $color;
+			box-shadow: $hor $ver $blur $spread $color;
+		}
+		@else {
+			-moz-box-shadow: inset $hor $ver $blur $spread $color;
+			-webkit-box-shadow:	inset $hor $ver $blur $spread $color;
+			box-shadow:	inset $hor $ver $blur $spread $color;
+		}
+	}
+	@else {
+		-moz-box-shadow: none;
+		-webkit-box-shadow:	none;
+		box-shadow:	none;
+	}
+}
+
+// Linear Gradient
+// ================================================================================
+@mixin linear-gradient($start, $stop) {
+	background-image: -moz-linear-gradient(top, $start, $stop);
+	background-image: -ms-linear-gradient(top, $start, $stop);
+	background-image: -o-linear-gradient(top, $start, $stop);
+	background-image: -webkit-gradient(linear, left top, left bottom, from($start), to($stop));
+	filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#{$start}', EndColorStr='#{$stop}', GradientType=0);
+}
+
+// Opacity
+// ================================================================================
+@mixin opacity($opacity) {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" + round($opacity * 100) + ")";
+	filter: alpha(opacity = round($opacity * 100));
+	-moz-opacity: $opacity;
+	-khtml-opacity: $opacity;
+	opacity: $opacity;
+}
+
+// Rotate
+// ================================================================================
+@mixin rotate($deg) {
+	-moz-transform: rotate($deg);
+	-ms-transform: rotate($deg);
+	-o-transform: rotate($deg);
+	-webkit-transform: rotate($deg);
+}
+
+// Transition
+// ================================================================================
+@mixin transition($prop: all, $dur: 0.3s, $func: ease, $delay: 0s) {
+	-moz-transition: $prop $dur $func $delay;
+	-o-transition: $prop $dur $func $delay;
+	-webkit-transition: $prop $dur $func $delay;
+	transition: $prop $dur $func $delay;
+}

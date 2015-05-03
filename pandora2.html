@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/pandora2.css" rel="stylesheet">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/main.ctrl.js"></script>
+    
+
+<title>Pandora2</title>
+</head>
+
+<body ng-app="app" ng-controller="MainController as main">
+
+
+<div ng-switch="main.isLoading">
+<div class="sp-container">
+
+
+
+	<div class="sp-content">
+		<div class="sp-globe"></div>
+		<h2 class="frame-1">Put your heart,</h2>
+		<h2 class="frame-2">mind and soul</h2>
+		<h2 class="frame-3">into even the smallest acts.</h2>
+		<h2 class="frame-4">This is</h2>
+		<h2 class="frame-5">
+            <span>The Secret</span> 
+			<span>of</span> 
+			<span>Success</span></h2>
+        
+        <!-- Navigation -->
+ 	<nav id="bt-menu" class="bt-menu">
+	<a href="#" class="bt-menu-trigger"><span>Menu</span></a>
+	<ul>
+		<li><a href="index.html"><button type="button" class="btn btn-default" aria-label="Left Align"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button></a></li>
+		<li><a href="#"><button type="button" class="btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-book" aria-hidden="true"></span></button></a></li>
+	</ul>
+            <!-- Modal for book icon -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel" align="center">Ray's Pandorabox Info</h4>
+                  </div>
+                  <div class="modal-body">
+                    First of all Thank you for testing my experimental pages, There are still lots of bugs from here and there but I can fix them later.
+                    <br><br>
+                    -Ray- 
+                    <br><br>
+                    <b>Note for my Pandorabox:</b> Click the box and it'll send you to a random website. Just click the menu if you want to go back to the home page
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- End Modal -->
+  
+    
+	</nav>
+    
+	</div>
+</div>
+
+</body>
+
+    <script src="js/menu.js"></script>
+    <script src="js/classie.js"></script>
+
+</html>
